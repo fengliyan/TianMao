@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评价页面下</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ max-width:1013px;
+ margin:20px auto;
+}
+div.top{
+ background-color: #F6F5F1;
+ width:100%;
+ height:28px;
+ border:1px solid #D5D4D4;
+ border-top:0px;
+ border-right:0px;
+}
+/*
+ 方法一：
+div.top div.left{
+左边div靠左显示，有红色上边框，右边框（设置div的高度小于外面div，实现边框效果）
+ float:left;
+ border-top:4px solid #c40000;
+ border-right:1px solid #D5D4D4;
+ width:100px;
+ height:20px;
+ font-weight:bold;
+ font-size:13px;
+ text-align:center;
+}*/
+/*div.top div.right{
+右边div占满右边，背景色为白色，设置下边框实现边框效果。右边合不上口
+ overflow:hidden;
+ float:none;
+ background-color:white;
+ height:20px;
+ border-bottom:1px solid #D5D4D4;
+}*/
+
+
+/*方法二：*/
+div.top div.left{
+ float:left;
+ width:100px;
+}
+div.left div.lefttop{
+ border-top:4px solid #c40000;
+ border-right:1px solid #D5D4D4;
+ width:100px;
+ height:20px;
+ font-weight:bold;
+ font-size:13px;
+ text-align:center;
+}
+/*div.left div.leftbottom{
+ border-right:1px solid red;
+ height:8px;
+}*/
+div.top div.right{
+  overflow:hidden;
+
+}
+div.right div.righttop{
+/*因为是空的div，要设置高度才有效果，否则默认高度为0*/
+ background-color:white;
+ height:20px;
+}
+div.top div.right div.rightbottom{
+/*因为是空的div，要设置高度才有效果，否则默认高度为0*/
+ border-top:1px solid #D5D4D4;
+ border-right:1px solid #D5D4D4;
+ height:8px;
+}
+
+
+div.bottom{
+ width:100%;
+ margin-top:20px;
+ background-color: #F6F5F1;
+ height:300px;
+ padding-top:20px;
+}
+div.bottom div.content{
+ margin-left:30px;
+ font-weight:bold;
+ font-size:15px;
+ font-family:宋体;
+  margin-bottom:20px;
+}
+div.bottom div.kuang{
+margin-left:30px;
+ background-color:white;
+ width:400px;
+ height:150px;
+}
+div.bottom div.kuang div.left{
+ float:left;
+ width:100px;
+ /*字体垂直居中一般不用vertical-align,它的使用有限制，用line-height:150(和父元素同高)可以实现*/
+ line-height:150px;
+ border-right:1px solid #D5D4D4;
+ text-align:center;
+ vertical-align:middle;
+}
+div.bottom div.kuang div.right{
+  padding:10px 10px;
+  overflow:hidden;
+  height:150px;
+}
+div.bottom div.kuang div.right textarea{
+ width:250px;
+ height:130px;
+  /*设置大小不可变*/
+ resize:none;
+ border:0px;
+}
+div.bottom div.button{
+  margin-top:10px;
+  width:100%;
+  background-color:white;
+  padding:20px;
+  text-align:center;
+}
+button.btn{
+ background-color:#c40000;
+ color:white;
+}
+</style>
+</head>
+<body>
+<div class="all">
+   <div class="top">
+   <!-- 方法一：div靠左float:left，剩下的div占满右面位置overflow:hidden，两个span实现不了一样的效果。 
+    <div class="left">累计评价<span class="num">13</span></div>
+    <div class="right"></div>-->
+    
+    <!-- 方法二：几个div组成:左上 左下  右上 右下 -->
+    <div class="left">
+     <div class="lefttop">累计评价<span class="num">13</span></div>
+     <div class="leftbottom"></div>
+    </div>
+    <div class="right">
+     <div class="righttop"></div>
+     <div class="rightbottom"></div>
+    </div>
+   </div>
+   
+   <div class="bottom">
+    <div class="content">其他买家，需要你的建议哦！</div>
+    <div class="kuang">
+     <div class="left">评价商品</div>
+     <div class="right">
+      <textarea></textarea>
+     </div>
+    </div>
+    <div class="button">
+     <button class="btn">提交评价</button>
+    </div>
+   </div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+</script>
+</body>
+</html>

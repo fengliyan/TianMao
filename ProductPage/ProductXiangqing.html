@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情</title>
+  <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ /*整体居中*/
+ width:800px;
+ margin:20px auto;
+}
+div.title{
+ border:1px solid #DFDFDF;
+ /*左边线隐藏，a.selected会有左边边框*/
+ border-left:none;
+}
+a.selected{
+ font-weight:bold;
+ color:#c40000;
+ width:100px;
+  /*便于设置宽度*/
+  display:inline-block;
+ text-align:center;
+ line-height:40px;
+ border-left:1px solid #cfbfb1;
+ border-right:1px solid #cfbfb1;
+ /*相对定位，因为要在前后加元素，它们相对于它绝对定位*/
+ position:relative;
+}
+a.selected:before{
+ content:"";
+  /*相对于a，绝对定位*/
+ position:absolute;
+  /*一个边框，宽度与父元素等宽*/
+ border:1px solid #b00000;
+ /*显示在a上面，否则显示在a左面*/
+ display:block;
+ width:100px;
+ /*将边框调整了下位置*/
+ top:-1px;
+ margin-left:-1px;
+ /*无高度仅仅显示边框*/
+ height:0px;
+}
+a.selected:after{
+ content:"";
+ position:absolute;
+ border-width:5px;
+ border-style:solid;
+ /*边框的上面显示，其余3个边透明*/
+ border-color:#b00000 transparent transparent;
+ display:block;
+ left:50%;
+ top:-1px;
+ margin-left:-5px;
+ width:0px;
+ height:0px;
+}
+a.shangpin{
+ padding:0px 20px;
+ color:#333;
+ /*因为设置了行高，所以线的高度和行高一样，不是占满div的整个高度*/
+ border-right:1px dotted  #D2D2D2;
+}
+a.shangpin span{
+ color:#3355B9;
+}
+div.product{
+ padding:20px;
+ border:1px solid #DFDFDF;
+}
+div.product div.chanpin{
+ font-weight:bold;
+ color:#999999;
+}
+div.product div.xiang{
+ margin-top:20px;
+}
+div.product div.xiang span{
+/*span以块状显示*/
+ display:inline-block;
+ width:200px;
+ margin-bottom:20px;
+}
+div.img{
+ margin:20px 0px;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+  <div class="title">
+   <a href="" class="selected">商品详情</a>
+   <a href="" class="shangpin">累计评价<span>19</span></a>
+  </div>
+  
+  <div class="product">
+   <div class="chanpin">产品参数：</div>
+   <div class="xiang">
+    <span>材质成分: 聚酯纤维100%</span>
+    <span>品牌: Emyche/艾米秋</span>
+    <span>货号: 129668</span>
+    <span>尺码: L M S XL X</span>
+    <span>上市年份季节: 2016年夏季</span>
+    <span>颜色分类: 白色 黑色 浅蓝</span>
+    <span>适用年龄: 18-25周岁</span>
+   </div>
+   <div style="clear:both"></div>
+  </div>
+  <div class="img">
+   <img src="../img/8626.jpg">
+  </div>
+ </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

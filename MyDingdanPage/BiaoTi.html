@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>标题</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ max-width:1013px;
+ margin:10px auto;
+}
+/*div.title span{
+ padding:10px;
+ border-bottom:2px solid #E8E8E8;
+ 
+}
+div.title span a{
+  font-size:16px;
+  font-weight:bold;
+ /*设置a的内边距，才可让右边的边框离文字远，若设置外边距，则右边框挨着文字;若将border放到span，线会很长，跟padding-top有关*/
+  /*padding:0px 20px;
+ border-right:1px solid #E8E8E8;
+ color:black;
+  text-decoration:none;
+}
+div.title span a:hover{
+ color:#c40000;
+ text-decoration:none;
+}*/
+
+div.title div{
+ padding-bottom:10px;
+ float:left;
+ border-bottom:2px solid #E8E8E8;
+}
+div.title div.kong{
+ height:34px;
+ /*最右面空div下面设置下划线，overflow:hidden设置隐藏左边的线条，只剩右边的*/
+ overflow:hidden;
+ float:none !important;/*靠右边，占用剩余空间*/
+ border-bottom:2px solid #E8E8E8;
+}
+div.title div a{
+ font-size:16px;
+ font-weight:bold;
+ color:black;
+ text-decoration:none;
+ /*设置a的内边距，才可让右边的边框离文字远，若设置外边距，则右边框挨着文字;*/
+ padding:0 20px;
+ border-right:1px solid #E8E8E8;
+}
+div.title div.selected{
+ border-bottom-color:#c40000;
+}
+div.title div.selected a{
+ color:#c40000;
+}
+div.title div a.pingjia{
+/*待评价右边的边框没有*/
+ border-right:0px !important;
+}
+div.title div a:hover{
+ color:#c40000;
+ text-decoration:none;
+}
+
+
+div.xiangqing table{
+ font-size:12px;
+ margin:20px;
+ width:100%;
+}
+div.xiangqing table thead{
+ background-color: #F5F5F5;
+ line-height:40px;
+ text-align:center;
+ border: 1px solid #E8E8E8;
+}
+
+</style>
+</head>
+<body>
+ <div class="all">
+     <div class="title">
+       <!--<span class="selected"><a href="#">所有订单</a></span>
+      <span><a href="#">待付款</a></span>
+      <span><a href="#">待发货</a></span>
+      <span><a href="#">待收货</a></span>
+      <span><a href="#">待评价</a></span> 
+      </div>-->
+      <div class="selected"><a href="#" orderstatus="all">所有订单</a></div>
+      <div><a href="#" orderstatus="pay">待付款</a></div>
+      <div><a href="#" orderstatus="fa">待发货</a></div>
+      <div><a href="#" orderstatus="shou">待收货</a></div>
+      <div><a href="#" class="pingjia" orderstatus="ping">待评价</a></div>
+      <div class="kong"></div>
+     </div>
+      <div style="clear:both"></div>
+   
+     
+     <div class="xiangqing">
+      <table>
+       <thead>
+        <tr>
+        <td>宝贝</td>
+        <td>单价</td>
+        <td>数量</td>
+        <td>实付款</td>
+        <td>交易操作</td>
+        </tr>
+       </thead>
+      </table>
+     </div>
+   </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

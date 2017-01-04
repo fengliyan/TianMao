@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评价</title>
+  <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+  width:800px;
+  margin:10px auto;
+}
+div.xiangqingtitle{
+ border:1px solid #DFDFDF;
+ /*左边线隐藏，a.selected会有左边边框*/
+ border-left:none;
+}
+div.xiangqingdiv a.selected{
+ font-weight:bold;
+ color:#c40000;
+ width:100px;
+  /*便于设置宽度*/
+  display:inline-block;
+ text-align:center;
+ line-height:40px;
+ border-left:1px solid #cfbfb1;
+ border-right:1px solid #cfbfb1;
+ /*相对定位，因为要在前后加元素，它们相对于它绝对定位*/
+ position:relative;
+}
+ /*div.xiangqingdiv a.selected:before{
+  content:"";
+ 相对于a，绝对定位*/
+  /*position:absolute;
+ 一个边框，宽度与父元素等宽*/
+  /*border:1px solid #b00000;
+ 显示在a上面，否则显示在a左面*/
+ /*display:block;
+  width:100px;
+ 将边框调整了下位置*/
+ /*top:-1px;
+ margin-left:-1px;
+ 无高度仅仅显示边框
+ height:0px;
+}*/
+/*div.xiangqingdiv a.selected:after{
+ content:"";
+ position:absolute;
+ border-width:5px;
+ border-style:solid;
+ 边框的上面显示，其余3个边透明
+ border-color:#b00000 transparent transparent;
+ display:block;
+ left:50%;
+ top:-1px;
+ margin-left:-5px;
+ weight:0px;
+ height:0px;
+}*/
+div.xiangqingdiv a.leiji{
+ padding:0px 20px;
+ color:#333;*/
+ /*因为设置了行高，所以线的高度和行高一样，不是占满div的整个高度*/
+ border-right:1px dotted  #D2D2D2;
+}
+a.leiji span{
+ color:#3355B9;
+}
+div.product{
+ padding:20px;
+ border:1px solid #DFDFDF;
+}
+div.product div.chanpin{
+ font-weight:bold;
+ color:#999999;
+}
+div.product div.xiang{
+ margin-top:20px;
+}
+div.product div.xiang span{
+/*span以块状显示*/
+ display:inline-block;
+ width:200px;
+ margin-bottom:20px;
+}
+div.img{
+ margin:20px 0px;
+}
+
+
+div.reviewtitle{
+ border:1px solid #DFDFDF;
+}
+div.pingjiadiv a.selected{
+ font-weight:bold;
+ color:#c40000;
+ width:100px;
+  /*便于设置宽度*/
+  display:inline-block;
+ text-align:center;
+ line-height:40px;
+ border-left:1px solid #cfbfb1;
+ border-right:1px solid #cfbfb1;
+ /*相对定位，因为要在前后加元素，它们相对于它绝对定位*/
+ position:relative;
+}
+/*div.pingjiadiv a.selected:before{
+  content:"";
+  相对于a，绝对定位*/
+ /*position:absolute;
+  一个边框，宽度与父元素等宽*/
+ /*border:1px solid #b00000;
+ 显示在a上面，否则显示在a左面*/
+ /*display:block;
+  width:100px;
+ 将边框调整了下位置*/
+ /*top:-1px;
+ margin-left:-1px;
+ 无高度仅仅显示边框
+ height:0px;
+}*/
+ /*div.pingjiadiv a.selected:after{
+ content:"";
+ position:absolute;
+ border-width:5px;
+ border-style:solid;
+边框的上面显示，其余3个边透明
+ border-color:#b00000 transparent transparent;
+ display:block;
+ left:50%;
+ top:-1px;
+ margin-left:-5px;
+ weight:0px;
+ height:0px;
+}*/
+div.pingjiadiv a.shangpin{
+ padding:0px 20px;
+ color:#333;
+}
+div.pingjia{
+ padding:40px 10px;
+}
+div.pingjia div.eachping{
+ padding-top:10px;
+ padding-bottom:5px;
+  border-bottom:1px solid #E3E3E3;
+}
+div.eachping div.left{
+ /*宽度这样设置，占整个的80%*/
+ width:80%;
+ /*可以水平排列*/
+ float:left;
+ display:inline-block;
+}
+div.left div.date{
+ margin-top:10px;
+ color: #CCCCCC;
+}
+div.eachping div.right{
+ text-align:center;
+ padding:10px;
+}
+div.right span{
+ color: #999999;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+ 
+ <div class="xiangqingdiv">
+
+ <div class="xiangqingtitle">
+   <a href="" class="selected">商品详情</a>
+   <a href="" class="leiji">累计评价<span>19</span></a>
+  </div>
+  
+  <div class="product">
+   <div class="chanpin">产品参数：</div>
+   <div class="xiang">
+    <span>材质成分: 聚酯纤维100%</span>
+    <span>品牌: Emyche/艾米秋</span>
+    <span>货号: 129668</span>
+    <span>尺码: L M S XL X</span>
+    <span>上市年份季节: 2016年夏季</span>
+    <span>颜色分类: 白色 黑色 浅蓝</span>
+    <span>适用年龄: 18-25周岁</span>
+   </div>
+  </div>
+  <div class="img">
+   <img src="http://how2j.cn/tmall/img/productDetail/8626.jpg">
+  </div>
+ </div>
+
+
+ <div class="pingjiadiv">
+  <div class="reviewtitle">
+   <a href="#" class="shangpin">商品详情</a>
+   <a href="#" class="selected">累计评价<span class="pingjia">19</span></a>
+  </div>
+  <div class="pingjia">
+   <div class="eachping">
+    <div class="left">
+      <div class="xiang">不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，很好的一次网购，生完宝宝刚刚一个多月我一百五十斤穿2XL不错</div>
+      <div class="date">2016-08-10</div>
+    </div>
+    <div class="right">
+         哀****莉<span>（匿名） </span>
+    </div>
+    <div style="clear:both"></div>
+   </div>
+   <div class="eachping">
+    <div class="left">
+      <div class="xiang">不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，很好的一次网购，生完宝宝刚刚一个多月我一百五十斤穿2XL不错</div>
+      <div class="date">2016-08-10</div>
+    </div>
+    <div class="right">
+         哀****莉<span>（匿名） </span>
+    </div>
+    <div style="clear:both"></div>
+   </div>
+   <div class="eachping">
+    <div class="left">
+      <div class="xiang">不错的购物，包装很精细，布料也不错舒服，因为之前一直购买品牌装，很好的一次网购，生完宝宝刚刚一个多月我一百五十斤穿2XL不错</div>
+      <div class="date">2016-08-10</div>
+    </div>
+    <div class="right">
+         哀****莉<span>（匿名） </span>
+    </div>
+    <div style="clear:both"></div>
+   </div>
+  </div>
+  </div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+ $(function(){
+   /*一开始隐藏评价栏*/
+   $("div.pingjiadiv").hide();
+   /*商品详情栏，点击评价时，显示评价栏隐藏商品详情栏*/
+   $("a.leiji").click(function(){
+     $("div.xiangqingdiv").hide();
+     $("div.pingjiadiv").show();
+   });
+   /*评价栏，点击商品详情时，显示商品详情栏隐藏评价栏*/
+   $("a.shangpin").click(function(){
+     $("div.xiangqingdiv").show();
+     $("div.pingjiadiv").hide();
+   });
+ });
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品列表</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ max-width:1013px;
+ margin:10px auto;
+}
+/*上面标题部分*/
+div.title div{
+ padding-bottom:10px;
+ float:left;
+ border-bottom:2px solid #E8E8E8;
+}
+div.title div.kong{
+ height:34px;
+ /*最右面空div下面设置下划线，overflow:hidden设置隐藏左边的线条，只剩右边的*/
+ overflow:hidden;
+ float:none !important;/*靠右边，占用剩余空间*/
+ border-bottom:2px solid #E8E8E8;
+}
+div.title div a{
+ font-size:16px;
+ font-weight:bold;
+ color:black;
+ text-decoration:none;
+ /*设置a的内边距，才可让右边的边框离文字远，若设置外边距，则右边框挨着文字;*/
+ padding:0 20px;
+ border-right:1px solid #E8E8E8;
+}
+div.title div.selected{
+ /*被选中的下划线颜色为红色*/
+ border-bottom-color:#c40000;
+}
+div.title div.selected a{
+ color:#c40000;
+}
+div.title div a.pingjia{
+/*待评价右边的边框没有*/
+ border-right:0px !important;
+}
+div.title div a:hover{
+ color:#c40000;
+ text-decoration:none;
+}
+div.xiangqing table{
+ font-size:12px;
+ margin-top:20px;
+ margin-bottom:20px;
+ width:100%;
+}
+div.xiangqing table thead{
+ background-color: #F5F5F5;
+ line-height:40px;
+ text-align:center;
+ border: 1px solid #E8E8E8;
+}
+
+
+/*下面产品列表部分部分*/
+div.product table{
+/*占100%*/
+ width:100%;
+ font-size:12px;
+ font-family:Arial;
+ border:1px solid #ECECEC;
+ margin-bottom:20px;
+}
+div.product table:hover{
+ border:2px solid #aaa;
+}
+div.product table td{
+/*设置列的内边距*/
+ padding:8px;
+}
+div.product table tr.top{
+ background-color:#F1F1F1;
+}
+div.product table td span.up{
+ display:block;
+ color: #3C3C3C;
+}
+div.product table td span.below{
+ display:block;
+ color: #999999;
+}
+div.product table td span.jiage{
+ display:block;
+ color: black;
+ font-weight:bold;
+}
+div.product table td.last{
+  vertical-align:top;
+  text-align:center;
+}
+div.wangwang{
+/*增添的背景*/
+ width:80px;
+ height:20px;
+ background-image:url(http://how2j.cn/tmall/img/site/wangwang.gif);
+ background-repeat:no-repeat;
+ 
+}
+table td.shanchu{
+/*文字的位置，靠右*/
+ text-align:right;
+}
+span.delete{
+ /*图标的颜色和大小*/
+ color:#999;
+ font-size:16px;
+}
+div.up{
+ position:relative;
+ height:80px;
+}
+div.up div.below{
+ position:absolute;
+ bottom:0px;
+}
+td.number{
+text-align:center;
+}
+button.pingjia{
+ font-weight:bold;
+  background-color: #fff;
+  border: 1px solid #DCDCDC;
+  padding: 6px 10px;
+}
+/*设置里的边框，默认是没有边框的*/
+table td.bb{
+border:1px solid #ECECEC;
+}
+button.confirmshou{
+ color:white;
+ background-color:#66B6FF;
+ border:0px;
+ font-weight:bold;
+ line-height:30px;
+ border-radius:5px;
+ width:80px;
+}
+
+</style>
+</head>
+<body>
+ <div class="all">
+   <!-- 上面标题部分 -->
+   <div class="title">
+       <!--<span class="selected"><a href="#">所有订单</a></span>
+      <span><a href="#">待付款</a></span>
+      <span><a href="#">待发货</a></span>
+      <span><a href="#">待收货</a></span>
+      <span><a href="#">待评价</a></span> 
+      </div>-->
+      <div class="selected"><a href="#" orderstatus="all">所有订单</a></div>
+      <div><a href="#" orderstatus="pay">待付款</a></div>
+      <div><a href="#" orderstatus="fa">待发货</a></div>
+      <div><a href="#" orderstatus="shou">待收货</a></div>
+      <div><a href="#" class="pingjia" orderstatus="ping">待评价</a></div>
+      <div class="kong"></div>
+     </div>
+      <div style="clear:both"></div>
+     <div class="xiangqing">
+      <table>
+       <thead>
+        <tr>
+        <!--为了上面table的各字段与下面table对齐-->
+        <td style="width:65%">宝贝</td>
+        <td>单价</td>
+        <td>数量</td>
+        <td>实付款</td>
+        <td>交易操作</td>
+        </tr>
+       </thead>
+      </table>
+     </div>
+   
+     <div class="product">
+      <table orderstatus="ping">
+       <tbody>
+       <tr class="top">
+       <!-- 占了2列 -->
+        <td colspan="2">
+        <span><b>2016-09-12 17:00:41</b></span>
+        <span class="hao">订单号: 20160912170041674794</span>
+        </td>
+        <td colspan="2"><img src="../img/orderItemTmall.png" width="13px">天猫商场</td>
+        <!-- 有一个图标-->
+        <td>
+         <a href="#"><div class="wangwang"></div></a>
+        </td>
+         <td class="shanchu">
+         <a href="#"><span class="delete glyphicon glyphicon-trash"></span></a>
+        </td>
+       </tr>
+       <tr>
+       <td><img width="80px" height="80px" src="../img/3796.jpg"></td>
+       <td>
+       <div class="up">
+        <a href="#">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+        <div class="below">
+        <img title="支持信用卡支付" src="../img/creditcard.png">
+        <img title="消费者保障服务,承诺7天退货" src="../img/7day.png">
+        <img title="消费者保障服务,承诺如实描述" src="../img/promise.png">
+        </div>
+       </div>
+       </td>
+        <td class="bb">
+        <span class="up">￥2,499.00</span>
+        <span class="below">￥2,124.15</span>
+       </td class="bb">
+        <td class="number">
+         1
+       </td>
+        <td class="bb">
+         <span class="jiage">￥2,124.15</span>
+         <span class="wenzi">(含运费：￥0.00)</span>
+       </td>
+        <td class="last">
+         <button class="pingjia">评价</button>
+       </td>
+       </tr>
+       </tbody>
+       </table>
+       
+       <!-- 每一项内容各自为一个table -->
+       <table orderstatus="shou">
+       <tbody>
+        <tr class="top">
+       <!-- 占了2列 -->
+        <td colspan="2">
+        <span><b>2016-09-12 17:00:41</b></span>
+        <span class="hao">订单号: 20160912170041674794</span>
+        </td>
+        <td colspan="2"><img src="../img/orderItemTmall.png" width="13px">天猫商场</td>
+        <!-- 有一个图标-->
+        <td>
+         <a href="#"><div class="wangwang"></div></a>
+        </td>
+         <td class="shanchu">
+         <a href="#"><span class="delete glyphicon glyphicon-trash"></span></a>
+        </td>
+       </tr>
+       <tr>
+       <td><img width="80px" height="80px" src="../img/3796.jpg"></td>
+       <td>
+       <div class="up">
+        <a href="#">公众智能扫地机器人家用全自动电动清洁地毯擦拖地一体机吸尘器</a>
+        <div class="below">
+        <img title="支持信用卡支付" src="../img/creditcard.png">
+        <img title="消费者保障服务,承诺7天退货" src="../img/7day.png">
+        <img title="消费者保障服务,承诺如实描述" src="../img/promise.png">
+        </div>
+       </div>
+       </td>
+        <td class="bb">
+        <span class="up">￥2,499.00</span>
+        <span class="below">￥2,124.15</span>
+       </td class="bb">
+        <td class="number">
+         1
+       </td>
+        <td class="bb">
+         <span class="jiage">￥2,124.15</span>
+         <span class="wenzi">(含运费：￥0.00)</span>
+       </td>
+        <td class="last"> 
+         <button class="confirmshou">确认收货</button>
+       </td>
+       </tr>
+       </tbody>
+      </table>
+     </div>
+   </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+  /*选中链接触发的事件*/
+  $("a[orderstatus]").click(function(){
+     var order=$(this).attr("orderstatus");
+     if(order=="all"){
+      $("table[orderstatus]").show();
+     }
+     else{
+      $("table[orderstatus]").hide();
+      $("table[orderstatus="+order+"]").show();
+     }
+     /*取消div的class,为选中的a的父元素div添加class*/
+     $("div.title div").removeClass("selected");
+     $(this).parent("div").addClass("selected");
+  });
+});
+</script>
+</body>
+</html>

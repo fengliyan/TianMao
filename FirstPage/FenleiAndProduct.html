@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分类和产品列表</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.categoryMenu{
+ width:200px;
+ background-color:#e2e2e3;
+ /*margin-left:20px;*/
+ position:absolute;
+ left:20px;
+ top:0;
+ z-index:1;
+}
+div.categoryMenu div.eachCategory{
+ /*字垂直居中*/
+ line-height:30px;
+ /*margin-bottom: 10px;*/
+}
+div.categoryMenu div.eachCategory span{
+ margin-right:10px;
+}
+div.categoryMenu div.eachCategory a{
+ color:#000;
+}
+div.categoryMenu div.eachCategory a:hover{
+ color:lightblue;
+ text-decoration:none;
+}
+div.categoryMenu div.eachCategory:hover{
+  background-color:white;
+}
+div.product{
+ width:800px;
+ /*margin-left: 220px;*/
+ padding-left:40px;
+ position: absolute;
+ left:220px;
+ top:0;
+ z-index:1;
+}
+div.product a{
+ color:#999;
+ margin-right:10px;
+}
+div.product a:hover{
+ color:#c40000;
+ text-decoration:none;
+}
+div.product div.row{
+ margin-bottom:20px;
+}
+div.product div.seperate{
+ border-bottom:1px dashed #e7e7e7;
+ margin-top:10px;
+}
+</style>
+</head>
+<body>
+ <div class="categorywithCarousel">
+    <div class="categoryMenu">
+      <div class="eachCategory" cid="83">
+       <span class="glyphicon glyphicon-link"></span>
+       <a href="#">平板电视</a>
+     </div>
+     <div class="eachCategory" cid="82">
+       <span class="glyphicon glyphicon-link"></span>
+       <a href="#">马桶</a>
+     </div>
+     <div class="eachCategory" cid="81">
+       <span class="glyphicon glyphicon-link"></span>
+       <a href="#nowhere">沙发</a>
+     </div>
+     <div class="eachCategory" cid="80">
+       <span class="glyphicon glyphicon-link"></span>
+       <a href="#nowhere">电热水器</a>
+     </div>
+     <div class="eachCategory" cid="79">
+      <span class="glyphicon glyphicon-link"></span>
+      <a href="#nowhere">平衡车</a>
+    </div>
+    <div class="eachCategory" cid="78">
+     <span class="glyphicon glyphicon-link"></span>
+     <a href="#nowhere">  扫地机器人 </a>
+   </div>
+    <div class="eachCategory" cid="77">
+    <span class="glyphicon glyphicon-link"></span>
+    <a href="#nowhere">原汁机
+    </a>
+   </div>
+   <div class="eachCategory" cid="76">
+   <span class="glyphicon glyphicon-link"></span>
+   <a href="#nowhere">冰箱   </a>
+ </div>
+  <div class="eachCategory" cid="75">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">  空调
+  </a>
+</div>
+ <div class="eachCategory" cid="74">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere"> 女表
+  </a>
+</div>
+<div class="eachCategory" cid="73">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">  男表
+  </a>
+</div>
+<div class="eachCategory" cid="72">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">男士手拿包 
+  </a>
+</div>
+<div class="eachCategory" cid="71">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">男士西服
+  </a>
+</div>
+<div class="eachCategory" cid="69">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">时尚男鞋
+  </a>
+</div>
+<div class="eachCategory" cid="68">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere"> 品牌女装
+  </a>
+</div>
+<div class="eachCategory" cid="64">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere"> 太阳镜
+  </a>
+</div>
+<div class="eachCategory" cid="60">
+  <span class="glyphicon glyphicon-link"></span>
+  <a href="#nowhere">安全座椅
+  </a>
+</div>
+</div>
+</div>
+  
+ <div class="product" cid="83" style="display:none">
+  <div class="row">
+   <a href="#nowhere">  屏大影院
+   </a>
+   <a href="#nowhere">周末
+   </a>
+   <a href="#nowhere"> 新品特惠
+   </a>
+   <a href="#nowhere">32吋电视机
+   </a>
+   <a href="#nowhere">智能网络
+   </a>
+   <div class="seperate"></div>
+ </div>
+ <div class="row ">
+  <a href="#nowhere"> USB高清解
+  </a>
+  <a href="#nowhere">芒果TV在线
+  </a>
+  <a href="#nowhere">抢购价
+  </a>
+  <a href="#nowhere">USB解码
+  </a>
+  <a href="#nowhere">32英吋
+  </a>
+  <a href="#nowhere">
+    10核
+  </a>
+  <a href="#nowhere">
+    TCL品牌日
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    不要赠品
+  </a>
+  <a href="#nowhere">
+    新品上市
+  </a>
+  <a href="#nowhere">
+    4K硬屏
+  </a>
+  <a href="#nowhere">
+    领100元券
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    智能高清
+  </a>
+  <a href="#nowhere">
+    8月，酷暑
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    8月大促
+  </a>
+  <a href="#nowhere">
+    天猫定制
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    智能操作系统
+  </a>
+  <a href="#nowhere">
+    金色外观
+  </a>
+  <a href="#nowhere">
+    三星屏幕
+  </a>
+  <a href="#nowhere">
+    客厅爆款
+  </a>
+  <a href="#nowhere">
+    八核配置
+  </a>
+  <a href="#nowhere">
+    限时特惠
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    限时特惠
+  </a>
+  <a href="#nowhere">
+    热销爆款
+  </a>
+  <a href="#nowhere">
+    4K全高清
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    六核智能
+  </a>
+  <a href="#nowhere">
+    14核4K
+  </a>
+  <a href="#nowhere">
+    YUNOS
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    YUNOS
+  </a>
+  <a href="#nowhere">
+    64位处理器
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    YUNOS
+  </a>
+  <a href="#nowhere">
+    微信电视
+  </a>
+  <a href="#nowhere">
+    4k超清
+  </a>
+  <a href="#nowhere">
+    64位真4K
+  </a>
+  <a href="#nowhere">
+    10核机芯
+  </a>
+  <a href="#nowhere">
+    V字黑釉底座
+  </a>
+  <a href="#nowhere">
+    4K超清
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    64位14核
+  </a>
+  <a href="#nowhere">
+    海量影视
+  </a>
+  <a href="#nowhere">
+    人气爆款
+  </a>
+  <a href="#nowhere">
+    限时特惠
+  </a>
+  <a href="#nowhere">
+    真4K屏
+  </a>
+  <a href="#nowhere">
+    65吋巨屏
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    4K超清视界
+  </a>
+  <a href="#nowhere">
+    限时特惠
+  </a>
+  <div class="seperate"></div>
+</div>        
+<div class="row ">
+  <a href="#nowhere">
+    55寸旗舰
+  </a>
+  <a href="#nowhere">
+    4K机皇
+  </a>
+  <a href="#nowhere">
+    曲面机皇
+  </a>
+  <a href="#nowhere" style="color: rgb(135, 206, 250);">
+    轻薄4K
+  </a>
+  <div class="seperate"></div>
+</div>        
+</div>
+</div>
+</div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+/* 产品列表出现与隐藏
+ 整体思路是：
+1. 把所有的产品列表都隐藏
+2. 当鼠标移动到菜单项上的时候，取出对应的cid
+3. 根据cid，找到对应的产品列表
+4. 显示改产品列表
+5. 当鼠标移开的时候，隐藏对应的产品列表
+*/
+$(function(){
+  /*当鼠标移入菜单项的时候，显示对应的产品列表*/
+  $("div.eachCategory").mouseenter(function(){
+    var cid=$(this).attr("cid");
+    $("div.product[cid="+cid+"]").show();
+  });
+  /*当鼠标移出菜单项的时候，隐藏对应的产品列表*/
+  $("div.eachCategory").mouseleave(function(){
+    var cid=$(this).attr("cid");
+    $("div.product[cid="+cid+"]").hide();
+  });
+  /*当鼠标移入产品列表的时候，显示对应的产品列表*/
+  $("div.product").mouseenter(function(){
+    $(this).show();
+  });
+  /*当鼠标移出产品列表的时候，隐藏对应的产品列表*/
+  $("div.product").mouseleave(function(){
+    $(this).hide();
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>结算</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ max-width:1013px;
+ margin:10px auto;
+}
+div.up span.upjia{
+ font-size:14px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.up button.upjiesuan{
+  width:60px;
+  height:30px;
+  color:white;
+  border-radius:2px;
+  background-color: #AAAAAA;
+  border-width:0px;
+}
+div.below{
+  background-color:#E5E5E5;
+   /*设置行高，垂直占得距离大*/
+  line-height:50px;
+  padding-left:20px;
+}
+div.below img{
+ /*鼠标在上面时显示手状*/
+ cursor:pointer;
+}
+div.below span.jian{
+font-size:14px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.below span.belowjia{
+ font-size:18px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.below button.belowjiesuan{
+  width:100px;
+  height:50px;
+  color:white;
+  font-size:18px;
+  background-color: #AAAAAA;
+  border-width:0px;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+ <!-- class="pull-right"不用clear,且div间不用设置display:block,div本来身效果就是什么效果 -->
+  <div class="pull-right up">
+   <span class="upyixuan">已选商品（不含运费）</span>
+   <span class="upjia">￥0.00</span>
+   <button class="upjiesuan" disabled="disabled">结 算</button>
+  </div>
+   <!-- pull-right靠右浮动，消除浮动 -->
+  <div style="clear:both"></div>
+ 
+  <div style="text-align:center;color:gray">
+     订单向内容，下个知识点讲解
+  </div>
+  <div class="below">
+   <img src="../img/cartNotSelected.png">
+   <span>全选</span>
+   <span class="pull-right">
+    <span class="belowyixuan">已选商品<span class="jian">0</span>件</span>
+    <span class="belowheji">合计（不含运费）</span>
+    <span class="belowjia">￥0.00</span>
+    <button class="belowjiesuan" disabled="disabled">结 算</button>
+   </span>
+  </div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

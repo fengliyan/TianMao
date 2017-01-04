@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品图片</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.allimg{
+ /*float：left可以保证与右面的信息水平排列*/
+ float:left;
+ margin:20px 20px; 
+  width:400px;
+}
+img.bigimg{
+border: 1px solid #F2F2F2;
+ width:400px;
+ height:400px;
+}
+div.smallimg{
+  margin:20px auto;
+  width:320px;
+} 
+div.smallimg img.small{
+width:60px;
+ /*若不加border,悬浮后加边框的时候会浮动，
+   之前有边框的话就不会浮动*/
+border:2px solid white;
+}
+div.smallimg img.small:hover{
+  border:2px solid black;
+}
+</style>
+</head>
+<body>
+<div class="allimg">
+   <img src="../img/8619_big.jpg" class="bigimg">
+   <div class="smallimg">
+    <img src="../img/8620.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8620.jpg">
+    <img src="../img/8619.jpg" class="small" imageurl="../img/8619_big.jpg">
+    <img src="../img/8618.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8618.jpg">
+    <img src="../img/8617.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8617.jpg">
+    <img src="../img/8616.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8616.jpg">
+   </div>
+   <div class="imgload"></div>
+  <div style="clear:both"></div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+   $("img.small").mouseenter(function(){
+     var imageurl=$(this).attr("imageurl");
+     $("img.bigimg").attr("src",imageurl);
+   });
+   /*因为图片比较大，进行图片的预加载;*/
+   $("img.bigimg").load(function(){
+     $("img.small").each(function(){
+       var imageurl=$(this).attr("imageurl");
+       img=new Image();
+       img.src=imageurl;
+       img.onload(function(){
+         $("div.imgload").append($img);
+       });
+     });
+   });
+
+ });
+
+</script>
+</body>
+</html>

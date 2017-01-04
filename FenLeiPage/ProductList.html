@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品列表</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+/*整体居中*/
+ max-width:1013px;
+ margin:20px auto;
+}
+div.sortbar{
+ margin:40px 40px;
+ background-color:#faf9f9;
+}
+table.sorttable{
+/*table显示在一行*/
+ display:inline-block;
+ border-collapse:collapse;
+}
+table.sorttable td{
+ height:17px;
+ border:1px solid #cccccc;
+ padding:2px;
+}
+table.sorttable td a{
+ color:#806f66;
+}
+table.sorttable td a:hover{
+ color:#c40000;
+}
+table.sorttable td.hit{
+ background-color:#f1edec;
+}
+table.sorttable td:hover{
+  background-color:#f1edec;
+}
+table.sorttable td input{
+/*改变输入框的宽度和高度，没有外边框*/
+ border-width:0px;
+ width:50px;
+ height:15px;
+  outline:none;
+}
+table.sorttable td input:hover{
+ border:1px solid transparent;
+ outline:none;
+}
+table.sorttable td.price{
+ vertical-align:center;
+ background-color:#cccccc;
+}
+
+
+
+div.products{
+ max-width:1000px;
+ margin:10px auto;
+}
+div.product{
+ /*display:inline-block;*/
+ float:left;
+ width:200px;
+ height:350px;
+ border:2px solid #eee;
+ background-color:white;
+ margin:10px;
+ padding:5px 20px;
+}
+div.product:hover{
+ border:4px solid #c40000;
+}
+div.product img.img{
+ width:150px;
+ height:200px;
+}
+div.product span.price{
+ display:block;
+ color:#cc0000;
+ font-size:14px;
+ font-weight:bold;
+ margin-left:5px;
+}
+div.product a.desc{
+ color:black;
+ margin:10px 0px;
+ /*若写上此句，只有第一行距左侧10px,之后的行不动*/
+/* margin-left:10px;*/
+}
+div.product a.desc:hover{
+ color:#c40000;
+ /* 有下划线*/
+ text-decoration:underline;
+ 
+}
+div.product a.sale{
+display:block;
+color:#999;
+ text-decoration:underline;
+  margin:10px 0px;
+}
+div.product a.sale:hover{
+
+color:#c40000;
+ text-decoration:underline;
+}
+div.product div.below{
+ border-top:2px solid #eee;
+ padding:5px;
+ color:#999;
+
+}
+div.product div.below span.chengjiao{
+ border-right:2px solid #eee;
+}
+div.product div.below span.bi{
+ font-weight:bold;
+ color:#b57c5b;
+}
+div.product div.below span.num{
+font-weight: bold;
+color: #3388BB;
+}
+div.logo{
+ padding-left:3px;
+}
+</style>
+</head>
+<body>
+<!-- 上面价格部分 -->
+  <div class="all">
+  <img src="http://how2j.cn/tmall/img/category/72.jpg">
+  <div class="sortbar">
+   <table class="sorttable">
+    <tbody><tr>
+    <td class="hit"><a href="#">综合<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+    <td><a href="#">人气<span class="glyphicon glyphicon-arrow-down"></span></td>
+    <td><a href="#">新品<span class="glyphicon glyphicon-arrow-down"></span></td>
+    <td><a href="#">销量<span class="glyphicon glyphicon-arrow-down"></span></td>
+    <td><a href="#">价格<span class="glyphicon glyphicon-resize-vertical"></span></td>
+    </tr></tbody>
+   </table>
+   <table class="sorttable">
+    <tbody><tr>
+    <td><input type="text" placeholder="请输入" class="begin  price"></td>
+    <td class="price">-</td>
+    <td><input type="text" placeholder="请输入" class="end  price"></td>
+    </tr></tbody>
+   </table>
+  </div>
+ </div>
+
+<!-- 下面产品列表部分 -->
+ <div class="products">
+  <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+  <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+ <div class="product" price="700">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥700</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+   <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+   <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+  <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+   <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+   <div class="product" price="719.4">
+   <a href="#"><img src="../img/7058.jpg" class="img"></a>
+   <span class="price">¥719.4</span>
+   <a href="#" class="desc">MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮</a>
+   <a href="#" class="sale">天猫专卖</a>
+   <div class="below">
+    <span class="chengjiao">月成交<span class="bi">16笔</span></span>
+    <span class="chengjiao">评价<span class="num">14</span></span>
+    <span class="logo">
+     <a href="#"><img src="../img/wangwang.png"></a>
+    </span>
+   </div>
+  </div>
+  
+  <div style="clear:both"></div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+
+  /*因为要获取值，所以不能在keypress和keydown事件上做监听，
+  因为这两个事件只能获取到按键点击之前的值*/
+   $("input.price").keyup(function(){
+     var num=$(this).val();
+     if(num.length==0){
+       $("div.product").show();
+           return;
+     }
+     
+     num=parseInt(num);
+     if(isNaN(num)){
+       num=1;
+     }
+     if(num<=0){
+       num=1;
+     }
+     $(this).val(num);
+     
+     var begin=$("input.begin").val();
+     var end=$("input.end").val();
+     if(!isNaN(begin)&&!isNaN(end)){
+       $("div.product").hide();
+       /*每一个product遍历*/
+       $("div.product").each(function(){
+         var price=$(this).attr("price");
+         if(price<=end&&price>=begin){
+           $(this).show();
+         }
+       });
+     }
+   });
+});
+</script>
+</body>
+</html>

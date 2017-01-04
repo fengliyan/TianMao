@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头部和收货地址</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+/*整体居中*/
+div.all{
+ max-width:1013px;
+ margin:20px auto;
+}
+div.address{
+ color: #333333;
+ margin-left:10px;
+ font-size:16px;
+ font-weight:bold;
+}
+div.bottom{
+ margin:10px 30px;
+}
+div.bottom table{
+/*宽度占满100%*/
+ width:100%;
+}
+div.bottom span.red{
+/*让图标变小*/
+font-size: 8px;
+ color:red;
+}
+div.bottom table td.xiangxi{
+/*即设置第一列的宽度，可调整列之间的间距*/
+ width:100px;
+}
+div.bottom table td textarea{
+/*设置textarea的宽度*/
+ width:400px;
+ border: 1px solid #AFAFAF;
+ margin-bottom:10px;
+ /*不可以调整大小resize:none;*/
+}
+div.bottom table td{
+ color:#333;
+  /*文字向左向上对齐*/
+ text-align:left;
+ vertical-align:top;
+ height: 30px;
+}
+div.bottom table input{
+  border: 1px solid #AFAFAF;
+  /*设置文本框的宽度*/
+  width:300px;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+   <div class="title">
+    <img src="../img/simpleLogo.png" class="pull-left">
+    <img src="../img/buyflow.png" class="pull-right">
+   </div>
+    <div style="clear:both"></div>
+   <div class="address">输入收货地址</div>
+   <div class="bottom">
+    <table>
+     <tr>
+     <td class="xiangxi">详细地址<span class="red">*</span></td>
+      <td><textarea placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息"></textarea></td>
+     </tr>
+     <tr>
+      <td>邮政编码</td>
+      <td><input type="text" placeholder="如果您不清楚邮递区号，请填写000000"></td>
+     </tr>
+      <tr>
+      <td>收货人姓名<span class="red">*</span></td>
+      <td><input type="text" placeholder="长度不超过25个字符"></td>
+     </tr>
+     <tr>
+      <td>手机号码<span class="red">*</span></td>
+      <td><input type="text" placeholder="请输入11位手机号码"></td>
+     </tr>
+    </table>
+   </div>
+   
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

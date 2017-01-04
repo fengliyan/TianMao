@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单项</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+  max-width:1013px;
+  margin:10px auto;
+ }
+ 
+ /*结算部分样式设置*/
+ div.up span.upjia{
+ font-size:14px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.up button.upjiesuan{
+  width:60px;
+  height:30px;
+  color:white;
+  border-radius:2px;
+  background-color: #AAAAAA;
+  border-width:0px;
+}
+div.below{
+  background-color:#E5E5E5;
+   /*设置行高，垂直占得距离大*/
+  line-height:50px;
+  padding-left:20px;
+  margin-top:20px;
+}
+div.below img{
+ /*鼠标在上面时显示手状*/
+ cursor:pointer;
+}
+div.below span.jian{
+font-size:14px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.below span.belowjia{
+ font-size:18px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.below button.belowjiesuan{
+  width:100px;
+  height:50px;
+  color:white;
+  font-size:18px;
+  background-color: #AAAAAA;
+  border-width:0px;
+}
+
+  /*中间订单项部分样式设置*/
+ table.desc{
+  /*table会展开，每列之剑不会挤到一起*/
+  width:100%;
+  /*字号，设置body字号12px不管用*/
+  font-size:12px;
+ }
+ 
+ /*设置thead的两列宽度，不知道有什么意义*/
+ table.desc thead{
+  text-align: center;
+ }
+ table.desc thead th.img{
+  width:100px;
+ }
+ table.desc thead th.operation{
+  width:30px;
+ }
+ 
+ /*tbody中每行都有边框*/
+ table.desc tbody tr{
+  border:1px solid #CCCCCC;
+ }
+ table.desc td{
+  padding:20px 20px;
+ }
+ table.desc img.logo{
+  border:1px solid #eee;
+  padding:1px;
+  width:80px;
+  height:80px;
+ }
+ /*把描述性文字和3张图片放到div，设置position:relative,好设置3张图片的位置*/
+ table.desc div.upimg{
+   position:relative;
+   height:80px;
+  }
+  /*相对于大的div设置位置*/
+ table.desc div.below{
+    position:absolute;
+    bottom:0px;
+   }
+ table.desc a.link{
+  color:#3c3c3c;
+ }
+ table.desc a.link:hover{
+  color:#c40000;
+  text-decoration:none;
+ }
+ table.desc span.updanjia{
+  text-decoration:line-through;
+  color:#9c9c9c;
+  font-size:14px;
+  font-weight:bold;
+  display:block;
+ }
+ table.desc span.belowdanjia{
+  display:block;
+  color:#c40000;
+   font-size:14px;
+  font-weight:bold
+ }
+ /*边框设置外面*/
+ table.desc div.jianjia{
+  border:1px solid  #E5E5E5;
+  width:80px;
+ }
+ table.desc div.jianjia a{
+ /*设置inline-block，才可设置宽度*/
+ display:inline-block;
+ width:14px;
+ text-align:center;
+ color:black;
+ text-decoration:none;
+ }
+ table.desc input.shuliang{
+ display:inline-block;
+  width:40px;
+  border:1px solid  #AAAAAA;
+ }
+ table.desc span.jine{
+  font-size: 14px;
+  font-weight: bold;
+  color: #C40000;
+ }
+ img.select{
+  cursor:pointer;
+ }
+</style>
+</head>
+<body>
+  <div class="all">
+    
+    <!-- 上面部分 -->
+     <div class="pull-right up">
+      <span class="upyixuan">已选商品（不含运费）</span>
+      <span class="upjia">￥0.00</span>
+      <button class="upjiesuan order" disabled="disabled">结 算</button>
+   </div>
+   
+    <!-- 中间订单项部分 -->
+     <table class="desc">
+      <thead>
+       <tr>
+       <td class="img"><img src="../img/cartNotSelected.png" class="selectall" selectif="false">全选</td>
+       <td>商品信息</td>
+       <td>单价</td>
+       <td>数量</td>
+       <td>金额</td>
+       <td class="operation">操作</td>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td><img src="../img/cartNotSelected.png" class="select" selectit="false" oiid="936">
+        <a href="#" style="display:none"><img src="../img/cartSelected.png"></a>
+        <img src="../img/3665.jpg" class="logo"></td>
+        
+        <td>
+        <!-- 若不用div，不写成相对定位绝对定位的效果也可以。下面写法也可以：
+        span设置为block,且设置外边距：
+        table span.below{
+          display:block;
+          margin-top:30px;
+        }
+        <a href="#" class="link">美国iRobot扫地机器人吸尘器全自动家用智能扫地机650 天猫电器城</a>
+         <span class="below">
+          <img title="支持信用卡支付" src="../img/creditcard.png">
+          <img title="消费者保障服务,承诺7天退货" src="../img/7day.png">
+          <img title="消费者保障服务,承诺如实描述" src="../img/promise.png">
+        </span>
+         -->
+        <div class="upimg">
+        <a href="#" class="link">美国iRobot扫地机器人吸尘器全自动家用智能扫地机650 天猫电器城</a>
+        <div class="below">
+        <img title="支持信用卡支付" src="../img/creditcard.png">
+        <img title="消费者保障服务,承诺7天退货" src="../img/7day.png">
+        <img title="消费者保障服务,承诺如实描述" src="../img/promise.png">
+        </div>
+        </div>
+        </td>
+        
+        
+        <td>
+        <span class="updanjia">￥7580.0</span>
+        <span class="belowdanjia" pid="365">￥5306.0</span>
+        </td>
+        <td>
+        <!-- 把div换成span，效果是一样的 -->
+        <div class="jianjia">
+        <a href="#" class="jian" pid="365">-</a>
+        <input type="text" class="shuliang" pid="365" oiid="936" value="1">
+        <a href="#" class="jia" pid="365">+</a>
+        </div>
+        </td>
+        <td>
+        <span class="jine" pid="365" oiid="936">￥5,306.00</span>
+        </td>
+        <td>
+        <button class="shanchu">删除</button>
+        </td>
+       </tr>
+       
+        <tr>
+        <td><img src="../img/cartNotSelected.png" class="select" selectit="false" oiid="935">
+        <a href="#" style="display:none"><img src="../img/cartSelected.png"></a>
+        <img src="http://how2j.cn/tmall/img/productSingle_middle/3665.jpg" class="logo"></td>
+        
+        <td>
+        
+        <div class="upimg">
+        <a href="#" class="link">美国iRobot扫地机器人吸尘器全自动家用智能扫地机650 天猫电器城</a>
+        <div class="below">
+        <img title="支持信用卡支付" src="../img/creditcard.png">
+        <img title="消费者保障服务,承诺7天退货" src="../img/7day.png">
+        <img title="消费者保障服务,承诺如实描述" src="../img/promise.png">
+        </div>
+        </div>
+        </td>
+        
+        
+        <td>
+        <span class="updanjia">￥7580.0</span>
+        <span class="belowdanjia" pid="364">￥5306.0</span>
+        </td>
+        <td>
+        <!-- 把div换成span，效果是一样的 -->
+        <div class="jianjia">
+        <a href="#" class="jian" pid="364">-</a>
+        <input type="text" class="shuliang" pid="364" oiid="935" value="1">
+        <a href="#" class="jia" pid="364">+</a>
+        </div>
+        </td>
+        <td>
+        <span class="jine" pid="364" oiid="935">￥5,306.00</span>
+        </td>
+        <td>
+        <button class="shanchu">删除</button>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     
+      <!-- 下面结算部分 -->
+     <div class="below">
+     <img src="../img/cartNotSelected.png">
+     <span>全选</span>
+     <span class="pull-right">
+       <span class="belowyixuan">已选商品<span class="jian">0</span>件</span>
+       <span class="belowheji">合计（不含运费）</span>
+       <span class="belowjia">￥0.00</span>
+       <button class="belowjiesuan order" disabled="disabled">结 算</button>
+   </span>
+  </div>
+    </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+ /*公共函数,以千进制格式化金额，比如金额是123456,就会显示成123,456*/
+ function format(num){
+    num = num.toString().replace(/\$|\,/g,'');  
+    if(isNaN(num))  
+        num = "0";  
+    sign = (num == (num = Math.abs(num)));  
+    num = Math.floor(num*100+0.50000000001);  
+    cents = num%100;  
+    num = Math.floor(num/100).toString();  
+    if(cents<10)  
+       cents = "0" + cents;  
+    for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)  
+      num = num.substring(0,num.length-(4*i+3))+','+  
+          num.substring(num.length-(4*i+3));  
+    return (((sign)?'':'-') + num + '.' + cents);  
+}
+//结算按钮是否可用：如果有一项被选择则可用
+ function createOrderButton(){
+    var selectAny=false;
+    $("img.select").each(function(){
+       if("selectit"==$(this).attr("selectit")){
+         selectAny=true;
+       }
+    });
+    if(selectAny){
+     $("button.order").css("background-color","#c40000");
+     $("button.order").removeAttr("disabled");
+    }
+    else{
+     $("button.order").css("background-color","#aaa");
+     $("button.order").attr("disabled","disabled");
+    }
+  }
+  //全选按钮是否选中，有一项未选中则该按钮不被选中
+  function select(){
+    var selectAll=true;
+    $("img.select").each(function(){
+      var selectit=$(this).attr("selectit");
+      if(selectit=="false"){
+        selectAll=false;
+      }
+    });
+    if(selectAll){
+      $("img.selectall").attr("src","../img/cartSelected.png");
+    }
+    else{
+     $("img.selectall").attr("src","../img/cartNotSelected.png");
+    }
+  }
+ //算出总价格 总数量，并显示在上下相应位置
+ function calsumprice(){
+  var sum=0;
+  var totalnum=0;
+  $("img.select[selectit='selectit']").each(function(){
+    var oiid=$(this).attr("oiid");
+    var price=$("span.jine[oiid="+oiid+"]").text();
+    price=price.replace(/,/g,"");
+    price=price.replace(/￥/g,"");
+    sum+=new Number(price);
+    var num=$("input.shuliang[oiid="+oiid+"]").val();
+    totalnum+=new Number(num);
+  });
+  $("span.upjia").html("￥"+format(sum));
+  $("span.belowjia").html("￥"+format(sum));
+  $("span.jian").html(totalnum);
+ }
+ //算每一项的总价格
+ function smallPrice(pid,num,price){
+   //传过来的price带有￥，需要正则把它去掉
+    price=price.replace(/,/g,"");
+    price=price.replace(/￥/g,"");
+   var totalprice=format(num*price);
+   //单项金额
+   $("span.jine[pid="+pid+"]").html("￥"+totalprice);
+   calsumprice();
+ }
+ 
+ 
+ $(function(){
+   /*点击每项，实现订单按钮，全选等*/
+   $("img.select").click(function(){
+      var selectit=$(this).attr("selectit");
+      if(selectit=="false"){
+        $(this).attr("src","../img/cartSelected.png");
+        $(this).attr("selectit","selectit");
+        $(this).parents("tr").css("background-color","#FFF8E1");
+      }
+      else{
+        $(this).attr("src","../img/cartNotSelected.png");
+        $(this).attr("selectit","false");
+        $(this).parents("tr").css("background-color","#fff");
+      }
+      //订单按钮的变化
+      createOrderButton();
+       //全选变化
+      select();
+       //总价格和总数量变化
+      calsumprice();
+   });
+   /*全选按钮，实现全选*/
+   $("img.selectall").click(function(){
+      var selectit=$(this).attr("selectit");
+      if(selectit=="selectit"){
+        $(this).attr("src","../img/cartNotSelected.png");
+        $(this).attr("selectit","false");
+        $("img.select").each(function(){
+         $(this).attr("src","../img/cartNotSelected.png");
+         $(this).attr("selectit","false");
+         $(this).parents("tr").css("background-color","#fff");
+        });
+      }
+      else{
+        $(this).attr("src","../img/cartSelected.png");
+        $(this).attr("selectit","selectit");
+        $("img.select").each(function(){
+         $(this).attr("src","../img/cartSelected.png");
+         $(this).attr("selectit","selectit");
+         $(this).parents("tr").css("background-color","#FFF8E1");
+        });
+      }
+      //订单按钮的变化
+      createOrderButton();
+      //总价格和总数量变化
+      calsumprice();
+     
+   });
+   //通过加减数量的变化，改变每一项的总价格
+   $("a.jia").click(function(){
+      var pid=$(this).attr("pid");
+      var num=$("input.shuliang[pid="+pid+"]").val();
+      var price=$("span.belowdanjia[pid="+pid+"]").text();
+      num++;
+      $("input.shuliang[pid="+pid+"]").val(num);
+      smallPrice(pid,num,price);
+   });
+   $("a.jian").click(function(){
+     var pid=$(this).attr("pid");
+     var num=$("input.shuliang[pid="+pid+"]").val();
+     var price=$("span.belowdanjia[pid="+pid+"]").text();
+     num--;
+     $("input.shuliang[pid="+pid+"]").val(num);
+     smallPrice(pid,num,price);
+   });
+   //输入数量，改变每一项的总价格
+   $("input.shuliang").keyup(function(){
+     var pid=$(this).attr("pid");
+     var price=$("span.belowdanjia[pid="+pid+"]").text();
+     var num=$("input.shuliang[pid="+pid+"]").val();
+     num=parseInt(num);
+     if(isNaN(num)){
+      num=1;
+     }
+     if(num<=0){
+      num=1;
+     }
+     smallPrice(pid,num,price);
+   });
+ });
+ 
+  
+ </script>
+</body>
+</html>

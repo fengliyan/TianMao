@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本信息</title>
+  <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+/*div.all{
+ margin:10px 20px;
+}
+div.img{
+设置图片float:left，可以保证与左面信息水平排列
+ float:left;
+}
+div.img img.logo{
+ width:100px;
+ height:100px;
+}*/
+div.all{
+ width:1000px;
+ margin:10px auto;
+}
+
+div.allimg{
+ /*float：left可以保证与右面的信息水平排列*/
+ float:left;
+ margin:20px 20px; 
+width:300px;
+}
+img.bigimg{
+border: 1px solid #F2F2F2;
+ width:300px;
+ height:300px;
+}
+div.smallimg{
+  margin:20px auto;
+  width:280px;
+} 
+div.smallimg img.small{
+width:50px;
+ /*若不加border,悬浮后加边框的时候会浮动，
+   之前有边框的话就不会浮动*/
+border:2px solid white;
+}
+div.smallimg img.small:hover{
+  border:2px solid black;
+}
+
+
+div.info{
+ /*自动隐藏溢出部分，结合图片float:left，
+    可以做到信息与图片水平排列，且信息会自动占用剩余宽度*/
+ overflow:hidden;
+ padding-left:20px;
+}
+div.info div.bigtitle{
+ font-size:16px;
+ font-weight:bold;
+ margin-left:10px;
+}
+div.info div.smalltitle{
+ color:#c40000;
+ margin-left:10px;
+}
+div.info div.jvhuasuan{
+ background-color:#2DA77A;
+ color:white;
+  /*div里面的内容，文字水平居中*/
+ text-align:center;
+ /*可以通过设置line-height,使文字垂直居中
+ （font-size:12px,line-height:40px）*/
+ line-height:40px;
+ margin-top:10px;
+}
+div.info span.jv{
+ font-size:18px;
+ font-family:黑体;
+ font-weight:bold;
+}
+div.info span.time{
+ color:#FFC057;
+  font-weight:bold;
+}
+div.info div.gouwu{
+ /*div的背景图片*/
+ background-image:url(../img/priceBackground.png);
+}
+
+div.info div.gouwuquan{
+ padding:10px 10px;
+}
+div.info div.gouwuquan img.gou{
+ height:20px;
+ weight:30px;
+}
+div.info span.pricezi{
+/*span显示为内联块，可以设置宽度*/
+ display:inline-block;
+ width:70px;
+ color:#999999;
+ margin-left:10px;
+}
+div.info span.priceyuan{
+ color:#999999;
+}
+div.info span.pricejia{
+  color:#999999;
+  /*文字中间划线*/
+  text-decoration:line-through;
+}
+div.info div.cuxiao{
+ padding:0px 10px;
+}
+div.info span.cuxiaozi{
+/*span显示为内联块，可以设置宽度*/
+ display:inline-block;
+ width:70px;
+ color:#999;
+ /*设置position:relative,上移一段距离*/
+ position:relative;
+ top:-8px;
+}
+div.info span.cuxiaoyuan{
+ color:#c40000;
+ font-size:16px;
+ font-weight:bold;
+}
+div.info span.cuxiaojia{
+ font-size:30px;
+ font-weight:bold;
+  color:#c40000;
+}
+div.info div.xiaoliang{
+ border-top:1px dashed #C9C9C9;
+ border-bottom:1px dashed #C9C9C9;
+ margin:20px 0px;
+ /*整个div的内边距，可以保证里面div右面的直线
+   不占满整个高度，而是距上下10px*/
+ padding:10px;
+}
+div.info div.xiaoliang div{
+ /*里面div显示内联块，各占45%,且里面的内容水平橘红*/
+ display:inline-block;
+ width:45%;
+ text-align:center;
+ color:#999;
+}
+div.info div.xiaoliang div:first-child{
+ border-right:1px solid #C9C9C9;
+}
+div.info span.xiaoliangjia{
+ font-weight:bold;
+ color:#c40000;
+}
+div.info div.kucun{
+ color:#999999;
+}
+div.info span.shuru{
+/*设置为内联块元素才能设置宽度，否则不可以设置宽度和高度*/
+display:inline-block;
+ width:60px;
+ height:40px;
+ border:1px solid #999;
+}
+div.info span.shuru input{
+ margin-top:5px;
+ /*宽度和高度各占外面span的80%*/
+ width:80%;
+ height:80%;
+ border:none;
+}
+div.info span.updown{
+ text-align:center;
+  /*两个图标设为block,上下排列。外面大的span设置为inline-block*/
+ display:block;
+ border:1px solid #999;
+ width:20px;
+}
+div.info span.arrow a{
+ color:#999;
+}
+div.info span.arrow a:hover{
+ color:#c40000;
+
+}
+div.info span.glyphicon{
+ /*.glyphicon也可以设置大小*/
+ font-size:8px;
+}
+div.info span.kongge{
+display:block;
+ background-color:white;
+ height:3px;
+}
+div.info span.arrow{
+/*两个图标设为block,上下排列。
+外面大的span设置为inline-block*/
+ display:inline-block;
+ position:relative;
+ top:5px;
+}
+div.info div.fuwu{
+ margin-top:10px;
+}
+div.info div.fuwu span{
+ color:#999;
+}
+div.info div.fuwu a{
+ color:#666666;
+}
+div.info div.fuwu a:hover{
+ text-decoration:none;
+}
+div.info div.bt{
+ margin-top:20px;
+ text-align:center;
+}
+div.info div.bt button{
+/*虽然button可以设置大小，但养成习惯也要设置display;
+     宽度和高度可调节*/
+  display: inline-block;
+  margin-right:20px;
+  width:200px;
+  height:40px;
+  font-size:18px;
+}
+div.info div.bt button.buy{
+ color:#C40000;
+ background-color: #FFEDED;
+  border:1px solid #c40000;
+}
+div.info div.bt button.cart{
+background-color: #C40000;
+ border:1px solid #c40000;
+color:white;
+}
+div.info div.bt span.glyphicon{
+  margin-right:5px;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+<!--左边图片部分-->
+<div class="allimg">
+   <img src="../img/8619_big.jpg" class="bigimg">
+   <div class="smallimg">
+    <img src="../img/8620.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8620.jpg">
+    <img src="../img/8619.jpg" class="small" imageurl="../img/8619_big.jpg">
+    <img src="../img/8618.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8618.jpg">
+    <img src="../img/8617.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8617.jpg">
+    <img src="../img/8616.jpg" class="small" imageurl="http://how2j.cn/tmall/img/productSingle/8616.jpg">
+   </div>
+   <div class="imgload"></div>
+  <div style="clear:both"></div>
+ </div>
+
+   <!--<div class="img">
+    <img src="http://how2j.cn/tmall/img/productSingle/8619.jpg" class="logo">
+   </div>-->
+   
+   <!--右边信息部分-->
+   <div class="info">
+     <div class="bigtitle">
+      Hisense/海信 LED32EC270W 海信32英寸液晶电视机 WIFI网络电视
+     </div>
+     
+     <div class="smalltitle">
+           新品上市 限时促销 全国联保 送货入户
+     </div>
+     
+     <div class="jvhuasuan">
+      <span class="jv">聚划算</span>
+      <span class="shangpin">此商品即将参加聚划算，<span class="time">1天19小时</span>后开始</span>
+     </div>
+     
+     <div class="gouwu">
+      <div class="gouwuquan">
+       <span><img src="../img/gouwujuan.png" class="gou"></span>
+       <span class="tianmao">全天猫实物商品通用</span>
+      </div>
+      <div class="price">
+       <span class="pricezi">价格</span>
+       <span class="priceyuan">¥</span>
+        <span class="pricejia">399.00</span>
+      </div>
+      <div class="cuxiao">
+       <span class="cuxiaozi">促销价</span>
+       <span class="cuxiaoyuan">¥</span>
+       <span class="cuxiaojia">379.05</span>
+      </div>
+     </div>
+     
+     <div class="xiaoliang">
+      <!--用span也可以-->
+      <div>销量<span class="xiaoliangjia">50</span></div>
+      <div>累计评价<span class="xiaoliangjia">19</span></div>
+     </div>
+     
+     <div class="kucun">
+      <span class="xiao">数量</span>
+      <span>
+        <span class="shuru"><input type="text" value="1" class="numbersetting"></span>
+        <span class="arrow">
+          <a href="#" class="increase"><span class="updown">
+           <span class="glyphicon glyphicon-arrow-up"></span>
+          </span></a>
+          <span class="kongge"></span>
+          <a href="#" class="decrease"><span class="updown">
+           <span class="glyphicon glyphicon-arrow-down"></span>
+          </span></a>
+        </span>
+                             件
+       </span>
+       <span>库存66件</span>
+     </div>
+     
+     <div class="fuwu">
+      <span>服务承诺</span>
+      <a href="#">正品保证</a>
+      <a href="#">极速退款</a>
+      <a href="#"> 赠运费险</a>
+      <a href="#">七天无理由退换</a>
+     </div>
+     
+     <div class="bt">
+      <button  class="buy">立即购买</button>
+      <button class="cart"><span class="glyphicon glyphicon-shopping-cart"></span>加入购物车</button>
+     </div>
+     </div>
+     </div>
+  
+   </div>
+   <div style="clear:both"></div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+$("img.small").mouseenter(function(){
+     var imageurl=$(this).attr("imageurl");
+     $("img.bigimg").attr("src",imageurl);
+   });
+   /*因为图片比较大，进行图片的预加载;*/
+   $("img.bigimg").load(function(){
+     $("img.small").each(function(){
+       var imageurl=$(this).attr("imageurl");
+       img=new Image();
+       img.src=imageurl;
+       img.onload(function(){
+         $("div.imgload").append($img);
+       });
+     });
+   });
+
+
+
+
+   var up=65;
+   /*在input输入数字进行的判断*/
+   $("input.numbersetting").keyup(function(){
+     var number=$(this).val();
+     number=parseInt(number);
+     if(isNaN(number)){
+       number=1;
+     }
+     if(number>65){
+       number=65;
+     }
+     if(number<=0){
+       number=1;
+     }
+     $(this).val(number);
+   });
+   
+   $("a.increase").click(function(){
+     var number=$("input.numbersetting").val();
+     number++;
+     if(number>up){
+       number=up;
+     }
+     $("input.numbersetting").val(number);
+   });
+   $("a.decrease").click(function(){
+     var number=$("input.numbersetting").val();
+     number--;
+     if(number<=0){
+       number=1;
+     }
+     $("input.numbersetting").val(number);
+   });
+ });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评价页面上</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ margin:10px auto;
+}
+div.img{
+ border:1px solid  #E7E7E7;
+ padding:0px 10px;
+ margin-left:10px;
+}
+div.content{
+/*右面内容有上边框。它和左边图片的父div设置外边距，不能自己设置，自己设置的话左面图片的位置也跟着变*/
+ border-top:1px solid  #E7E7E7;
+ padding:20px;
+ /*占满右边位置*/
+ float:none;
+ overflow:hidden;
+}
+div.title{
+ font-size:16px;
+ font-weight:bold;
+ margin-bottom:10px;
+}
+div.below div{
+ color:#999999;
+ padding:5px;
+ 
+}
+div.below div span.jiage{
+ display:inline-block;
+ width:100px;
+}
+div.below div span.jia{
+  font-size:20px;
+  color:#c40000;
+  font-weight:bold;
+}
+div.below div span.jian{
+ font-size:14px;
+ color:#c40000;
+ font-weight:bold;
+}
+div.bottom{
+border: 1px solid #F6F5F3;
+ margin-top:15px;
+ background-color:#FDFBFA;
+ height:300px;
+ width:100%;
+}
+div.bottom img{
+border: 1px solid #E1E1E1;
+/*设置相对位置*/
+ position:relative;
+ top:20px;
+ left:100px;
+}
+div.bottom div.neirong{
+border: 1px solid #EFEFEF;
+ width:190px;
+ position:relative;
+ top:20px;
+ left:100px;
+ 
+}
+</style>
+</head>
+<body>
+ <div class="all">
+   <!-- 靠左边,pull-left -->
+   <div class="img pull-left">
+    <img style="width:200px;height:200px" scr="../img/8697.jpg" class="png">
+   </div>
+   
+   <div class="content">
+    <div class="title">2016夏季新款女装雪纺衫短裤两件套 韩版时尚名媛休闲套装女夏装</div>
+    <div class="below">
+     <div><span class="jiage">价格:</span><span class="jia">  ￥263.00 </span><span>元</span></div>
+     <div><span class="jiage">配送</span><span class="kuaidi">  快递: 0.00</span></div>
+     <div><span class="jiage">月销量</span><span class="jian"> 50 </span><span>件</span></div>
+    </div>
+    <div class="bottom">
+       <img src="../img/reviewLight.png">
+      <div class="neirong">
+                       现在查看的是 您所购买商品的信息 于2016年09月12下单购买了此商品
+      </div>
+    </div>
+   </div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+</script>
+</body>
+</html>

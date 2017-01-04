@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品列表</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.homepage{
+background-color:#f5f5f5;
+width:1013px;
+margin:10px auto;
+padding:50px 10px;
+}
+div.eachhomepage{
+ margin-bottom:40px;
+ margin-left:40px;
+}
+span.left-mark{
+ /*为了设置宽高*/
+ display:inline-block;
+ height:20px;
+ width:5px;
+ background-color:#19C8A9;
+  /*垂直方向上，top*/
+ vertical-align:top;
+}
+span.title{
+ font-size:16px;
+ font-weight:bold;
+ margin-left:20px;
+}
+div.productitem{
+/*div向左浮动，可以实现水平排列*/
+float:left;
+width:180px;
+height:300px;
+background-color:white;
+padding:1px;
+margin-top:15px;
+cursor:pointer;
+}
+div.productitem img{
+ width:175px;
+ height:200px;
+}
+div.productitem img:hover{
+ opacity:0.7;
+ filter:alpha(opacity=70);
+}
+div.productitem span.productitemDesc{
+ display:block;
+ font-size:14px;
+ color:black;
+ margin:10px 20px;
+}
+div.productitem a:hover{
+ text-decoration:none;
+}
+div.productitem span.price{
+  font-size:16px;
+  color:#ff003a;
+  font-weight:bold;
+   margin:10px 20px;
+}
+img.endpng{
+ /*显示为块级，为了显示居中效果*/
+ display:block;
+  margin:10px auto;
+  width:100px;
+}
+</style>
+</head>
+<body>
+<div class="homepage">
+ 
+  <div class="eachhomepage">
+    <span class="left-mark"></span>
+    <span class="title">太阳镜</span>
+    <!-- 前后都得清除浮动，如果前后都有元素的话，否则元素位置显示不正确 -->
+     <div style="clear:both"></div>
+
+         <div class="productitem">
+        <a href="#"><img src="../img/9543.jpg" width="100px"></a>
+        <a href="#" class="productitemDesclink">
+         <span class="productitemDesc">[热销] 好先生同款墨镜孙红雷偏光男士太阳镜韩明星</span>
+        </a>
+        <span class="price">97.5</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9532.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]陌森太阳眼镜男女2016偏光定制驾驶近视</span>
+       </a>
+       <span class="price">518.70</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9521.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销] 帕莎Prsr太阳镜女偏光镜潮范冰冰同款女</span>
+       </a>
+       <span class="price">634</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9510.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]
+                            变色眼镜男女款半框太阳镜大框潮流防辐射防</span>
+       </a>
+       <span class="price">170</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9499.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]
+                            新款男士偏光太阳镜日夜两用墨镜潮运动开车</span>
+       </a>
+       <span class="price">551</span>
+      </div>
+      <!-- 前后都得清除浮动，如果前后都有元素的话，否则元素位置显示不正确 -->
+       <div style="clear:both"></div>
+  </div>
+
+  <div class="eachhomepage">
+    <span class="left-mark"></span>
+    <span class="title">太阳镜</span>
+    <!-- 前后都得清除浮动，如果前后都有元素的话，否则元素位置显示不正确 -->
+     <div style="clear:both"></div>
+     
+         <div class="productitem">
+        <a href="#"><img src="../img/9543.jpg" width="100px"></a>
+        <a href="#" class="productitemDesclink">
+         <span class="productitemDesc">[热销] 好先生同款墨镜孙红雷偏光男士太阳镜韩明星</span>
+        </a>
+        <span class="price">97.5</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9532.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]陌森太阳眼镜男女2016偏光定制驾驶近视</span>
+       </a>
+       <span class="price">518.70</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9521.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销] 帕莎Prsr太阳镜女偏光镜潮范冰冰同款女</span>
+       </a>
+       <span class="price">634</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9510.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]
+                            变色眼镜男女款半框太阳镜大框潮流防辐射防</span>
+       </a>
+       <span class="price">170</span>
+      </div>
+      <div class="productitem">
+       <a href="#"><img width="100px" src="../img/9499.jpg"></a>
+       <a href="#" class="productitemDesclink">
+        <span class="productitemDesc">[热销]
+                            新款男士偏光太阳镜日夜两用墨镜潮运动开车</span>
+       </a>
+       <span class="price">551</span>
+      </div>
+      <!-- 前后都得清除浮动，如果前后都有元素的话，否则元素位置显示不正确 -->
+      <div style="clear:both"></div>
+  </div>
+  <img src="http://how2j.cn/tmall/img/site/end.png" class="endpng" id="endpng">
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

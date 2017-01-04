@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>确认订单</title>
+	 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+div.all{
+ max-width:1013px;
+ margin:10px auto;
+}
+div.title{
+ font-size:16px;
+ font-weight:bold;
+ margin-bottom:30px;
+}
+table{
+/*设置字体，宋体，也可设置为黑体*/
+ font-size:12px;
+ font-family:宋体;
+ width:100%;
+} 
+table thead{
+/*thead下面的线*/
+  border-bottom:3px solid #B4D0FF;
+}
+/* 若用th，font-weight:normal表示不加粗
+table thead th{
+ font-weight:normal;
+}*/
+table thead td a.dianpu{
+ color:#333;
+}
+table thead td.tt{
+ color:#999;
+}
+/*table thead tr.rowborder td{
+下划线的高度无法改变
+ height:10px;
+ background-color:#b2d1ff;
+ border-right: 3px solid #fff;
+}*/
+/*设置tr内边距没有效果，设置td的内边距有效果*/
+table td{
+ padding:10px 10px;
+ /*文字居中*/
+ text-align:center;
+}
+/*第一列居左*/
+table td.first{
+ text-align:left;
+}
+table td.second{
+text-align:left;
+}
+span.wangwang{
+ background-image:url(http://how2j.cn/tmall/img/site/wangwang.gif);
+ 
+ background-repeat:no-repeat;
+}
+table tbody td{
+/*每行下面的线*/
+ border-bottom:1px solid #E5E5E5;
+}
+table tbody td a{
+ color:#666;
+  display:block;
+}
+span.png{
+ display:block;
+ text-align:left;
+ height: 16px;
+} 
+table tbody td.xiaoji{
+ color:#cc0000;
+ font-weight:bold;
+}
+table tbody td.first{
+/*第一列下面线没有*/
+ border-bottom:0px;
+}
+table tbody td select{
+ width:100px;
+ height:23px;
+}
+div.liuyan{
+ border-top:3px solid #B4D0FF;
+ background-color:#F2F6FF;
+ height:40px;
+ padding:10px 10px;
+ color:#999;
+ vertical-align:top;
+}
+span.liu{
+  float: left;
+}
+div.shifukuan{
+ float:right;
+  color:#999;
+}
+div.shifukuan span.jiage{
+ font-weight:bold;
+ font-size:18px;
+ color:#c40000;
+}
+button.tijiao{
+ margin-top:20px;
+  float:right;
+  width:200px;
+  line-height:40px;
+  background-color:#C40000;
+  border:0px;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
+/*textarea出现时的样式*/
+textarea.content{
+ border:1px solid #FFAD35;
+ width:250px;
+ height:60px;
+ /*resize指用户无法调整textarea的尺寸；若both，可调整宽度和高度*/
+  resize: none;
+}
+</style>
+</head>
+<body>
+ <div class="all">
+  <div class="title">确认订单信息</div>
+  <div class="content">
+   <table>
+    <thead>
+    <tr>
+    <!-- td与th的区别：th加粗。<strong>加粗 -->
+     <td colspan="2" class="first"><img src="../img/tmallbuy.png" width="20px" height="20px">
+       <a href="#" class="dianpu">店铺：天猫店铺</a>
+       <a href="#" class="wangwanglink"><span class="wangwang"></span></a>
+     </td>
+     <!-- <strong>加粗  
+      <td class="tt"><strong>单价</strong></td>-->
+     <td class="tt">单价</td>
+     <td class="tt">数量</td>
+     <td class="tt">小计</td>
+     <td class="tt">配送方式</td>
+    </tr>
+    <!--<tr class="rowborder">
+     <td colspan="2"></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>-->
+    </thead>
+    <tbody>
+     <tr>
+      <td class="first"><img src="../img/4206.jpg" width="50px" height="50px" style="border: 1px solid #E9E9E9;"></td>
+      <td class="second">
+       <a href="#">Philips/飞利浦 HR1897/30破壁微榨原汁机 多功能家用果汁榨汁机</a>
+       <span class="png">
+        <img src="../img/creditcard.png">
+        <img src="../img/7day.png">
+        <img src="../img/promise.png">
+       </span>
+      </td>
+      <td>￥3,514.05</td>
+      <td>2</td>
+      <td class="xiaoji">￥7,028.10</td>
+      <td rowspan="2">
+        <label>
+         <input type="radio">普通配送
+        </label>
+        <select>
+         <option>快递 免邮费</option>
+        </select>
+      </td>
+     </tr>
+          <tr>
+      <td><img src="../img/4206.jpg" width="50px" height="50px"></td>
+      <td class="second">
+       <a href="#">Philips/飞利浦 HR1897/30破壁微榨原汁机 多功能家用果汁榨汁机</a>
+       <span class="png">
+        <img src="../img/creditcard.png">
+        <img src="../img/7day.png">
+        <img src="../img/promise.png">
+       </span>
+      </td>
+      <td>￥3,514.05</td>
+      <td>2</td>
+      <td class="xiaoji">￥7,028.10</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="liuyan">
+   <span class="liu">
+    <span>给卖家留言:</span>
+    <img src="../img/leaveMessage.png" class="image">
+    
+    <!-- 一开始隐藏起来，点击后显示 -->
+    <span style="display:none" class="itemcontent">
+      <textarea class="content"></textarea>
+      <div class="zishu">
+       还可输入200个字
+      </div>
+    </span>
+    
+   </span>
+   <span class="heji pull-right">店铺合计(含运费): ￥9,152.25</span>
+  </div>
+  <div style="clear:both"></div>
+  <div class="shifukuan">
+   <span>实付款:<span class="jiage">￥9,152.25</span></span>
+  </div>
+  <div style="clear:both"></div>
+  <div>
+   <button class="tijiao">提交订单</button>
+  </div>
+ </div>
+   
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+  $("img.image").click(function(){
+    $(this).hide();
+    $("span.itemcontent").show();
+    $("div.liuyan").css("height","100px");
+  });
+});
+</script>
+</body>
+</html>

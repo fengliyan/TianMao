@@ -1,0 +1,12 @@
+/*all tag*/
+body{
+ font-size:12px;
+ font-family:Arial;
+}
+a{
+ color:#999;
+}
+a:hover{
+ color:#c40000;
+ text-decoration:none;
+}

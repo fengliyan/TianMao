@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易搜索框</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!--放在bootstrap.css下面，就近原则-->
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+/*body{
+ font-size:12px;
+ font-family:Arial;
+}*/
+.logo{
+ position:absolute;
+ left:20px;
+ top:30px;
+ width:140px;
+}
+/*a{
+ color:#999;
+}
+a:hover{
+ color:#c40000;
+ text-decoration:none;
+}*/
+div.search{
+ margin:20px;
+ width:300px;
+ height:30px;
+ background-color:#c40000;
+ padding:1px;
+}
+div.search input{
+ width:200px;
+ height:26px;
+ border:1px solid transparent;
+ margin:1px;
+ outline:none;
+}
+div.search button{
+ width:80px;
+ font-size:15px;
+ background-color:#c40000;
+  border:1px solid transparent;
+  outline:none;
+  color:white;
+}
+div.searchBelow{
+ margin-top:5px;
+ margin-left:-20px;
+}
+div.searchBelow a{
+ margin:0px 20px;
+}
+div.searchBelow span{
+color:#999;
+}
+</style>
+</head>
+<body>
+ <div>
+  <a href="#"><img src="../img/simpleLogo.png" class="logo"></a>
+  <div class="pull-right search">
+    <input type="text" placeholder="平衡车 原汁机">
+    <button type="submit">搜天猫</button>
+    <div class="searchBelow">
+     <span><a href="#">冰箱</a><span>|</span></span>
+      <span><a href="#">空调</a><span>|</span></span>
+       <span><a href="#">女表</a><span>|</span></span>
+        <span><a href="#">男表</a></span>
+    </div>
+  </div>
+   <!-- 清除浮动，否则在div后加入元素，其位置不正确 -->
+   <div style="clear:both"></div>
+ </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

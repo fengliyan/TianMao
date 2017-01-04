@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索框</title>
+ 
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="../css/public.css">
+	<style type="text/css">
+/*body{
+ font-size:12px;
+ font-family:Arial;
+}*/
+img.logo{
+ position:absolute;
+ left:0px;
+ top:0px;
+ z-index:-1;
+}
+/*a{
+ color:#999;
+}
+a:hover{
+ text-decoration:none;
+ color:#C40000;
+}*/
+div.searchDiv{
+ background-color:#C40000;
+ width:400px;
+ height:40px;
+ /*水平居中*/
+ margin:30px auto;
+ display:block;
+ padding:1px;
+}
+div.searchDiv input{
+ width:275px;
+ height:36px;
+ outline:none;
+ /*input默认是有边框的*/
+ border:1px solid transparent;
+ margin:1px;
+}
+div.searchDiv button{
+ width:110px;
+ background-color:#C40000;
+ color:white;
+  /*button默认是有边框的*/
+ border:1px solid transparent;
+ outline:none;
+ font-size:16px;
+ weight:bold;
+}
+div.searchBelow{
+ margin-top:3px;
+ margin-left:-20px;
+ 
+}
+div.searchBelow span{
+ color:#999;
+}
+div.searchBelow a{
+ padding:0 20px;
+ font-size:14px;
+}
+</style>
+</head>
+<body>
+ <div>
+  <a href="#"> <img src="../img/logo.gif" class="logo"></a>
+  
+  <div class="searchDiv">
+   <input type="text" placeholder="时尚男鞋 太阳镜">
+   <button class="searchButton" type="submit">搜索</button>
+   
+   <div class="searchBelow">
+    <span><a href="#">平衡车</a></span><span>|</span>
+    <span><a href="#">扫地机器人</a></span><span>|</span>
+    <span><a href="#">原汁机</a></span><span>|</span>
+    <span><a href="#">冰箱</a></span>
+   </div>
+  </div>
+ </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
